@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reviews & Recommendations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .blog-header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+        }
+        .blog-post {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .post-title {
+            color: #007bff;
+        }
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="blog-header text-center">
+        <h1>Book Reviews & Recommendations</h1>
+        <p>Your go-to place for the latest book insights!</p>
+    </header>
+
+    <main class="my-4">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Blog Post 1 -->
+                <div class="blog-post">
+                    <h2 class="post-title">Review: The Great Gatsby</h2>
+                    <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+                    <p>The novel "The Great Gatsby" was authored by one F. Scott Fitzgerald and centers around the lives of members from America's upper echelon in the 1920s, primarily those dwelling within New York City and West Egg on Long Island. This tale delves into themes such as hope, fate, illusion versus reality and betrayal that are quintessentially American.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="blog-post">
+                    <h2 class="post-title">Recommendation: The Silent Patient</h2>
+                    <p><strong>Author:</strong> Alex Michaelides</p>
+                    <p>Alex Michaelides' "The Silent Patient" is the type of thriller to seize a reader from the very first page and not relent. One will meet it as a psychological riddle wrapped in an intense narrative that, to some extent, keeps one turning pages to the very end.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="blog-post">
+                    <h2 class="post-title">Review: Where the Crawdads Sing</h2>
+                    <p><strong>Author:</strong> Delia Owens</p>
+                    <p>Where the Crawdads Sing" is a captivating adaptation of Delia Owens' bestselling novel, bringing the hauntingly beautiful marshlands of North Carolina to life. The film intertwines two compelling narratives: the mysterious life of Kya, known as the Marsh Girl, and a gripping murder investigation. 
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h3>About Me</h3>
+                <p>We are a leading firm in our industry, dedicated to providing the best services to our clients.</p>
+                <h3>Categories</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#">Fiction</a></li>
+                    <li><a href="#">Non-Fiction</a></li>
+                    <li><a href="#">Mystery</a></li>
+                    <li><a href="#">Fantasy</a></li>
+                    <li><a href="#">Science Fiction</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row my-4">
+            <div class="col-md-12">
+                <h3>Submit Your Review</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="bookTitle">Book Title</label>
+                        <input type="text" class="form-control" id="bookTitle" placeholder="Enter book title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="authorName">Author Name</label>
+                        <input type="text" class="form-control" id="authorName" placeholder="Enter author name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewText">Review</label>
+                        <textarea class="form-control" id="reviewText" rows="3" placeholder="Write your review..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Book Reviews & Recommendations. All rights reserved.</p>
+    </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

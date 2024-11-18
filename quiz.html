@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendations Quiz</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(360_F_506934046_VsYKsZMOraEmoq01NyZzjbkDwwxQdmEl.jpg);
+            background-size: cover;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+        .quiz-container {
+            margin-top: 100px;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+        .result-modal {
+            padding: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container quiz-container">
+    <h2 class="text-center">Book Recommendations Quiz</h2>
+    <form id="quizForm">
+        <div class="form-group">
+            <label for="favoriteGenre">What is your favorite genre?</label>
+            <select class="form-control" id="favoriteGenre" required>
+                <option value="" disabled selected>Select your genre</option>
+                <option value="fiction">Fiction</option>
+                <option value="non-fiction">Non-Fiction</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Spiritual">Spiritual</option>
+                <option value="nInspirational">Inspirational</option>
+                <option value="Romantic">Romantic Novels</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="mystery">Mystery</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="biography">Biography</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="readingFrequency">How often do you read?</label>
+            <select class="form-control" id="readingFrequency" required>
+                <option value="" disabled selected>Select frequency</option>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="rarely">Rarely</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="favoriteAuthor">Who is your favorite author?</label>
+            <input type="text" class="form-control" id="favoriteAuthor" required>
+        </div>
+        <button type="submit" class="btn btn-light btn-block">Submit</button>
+    </form>
+</div>
+
+<!-- Result Modal -->
+<div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resultModalLabel">Quiz Results</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body result-modal">
+                <p id="resultMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('quizForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const genre = document.getElementById('favoriteGenre').value;
+        const frequency = document.getElementById('readingFrequency').value;
+        const author = document.getElementById('favoriteAuthor').value;
+
+        const resultMessage = `You enjoy reading ${genre} books, you read ${frequency}, and your favorite author is ${author}.`;
+
+        document.getElementById('resultMessage').innerText = resultMessage;
+
+        $('#resultModal').modal('show');
+    });
+</script>
+
+</body>
+</html>
